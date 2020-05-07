@@ -10,21 +10,21 @@ class IntoScreens extends StatefulWidget {
 class _IntoScreensState extends State<IntoScreens> {
   List<Slide> slides = new List();
 
-  // var _colorWgit = 0xffffffff;
+  static const _colorBlue = 0xFF2A3B8F;
   var _colorOrange = 0xffef9807;
 
   final TextStyle _titleStyle = const TextStyle(
-    color: Color(0xFF2A3B8F),
+    color: Color(_colorBlue),
     fontSize: 22.0,
     fontWeight: FontWeight.bold,
-    fontFamily: 'RobotoMono',
+    // fontFamily: 'Panton Bold',
   );
 
   final TextStyle _styleDescription = const TextStyle(
     color: Colors.black54,
     fontSize: 14.0,
-    letterSpacing: 0.3,
-    fontFamily: 'RobotoMono',
+    letterSpacing: 0.2,
+    // fontFamily: 'RobotoMono',
   );
 
   Function goToTab;
@@ -50,7 +50,7 @@ class _IntoScreensState extends State<IntoScreens> {
         maxLineTitle: 2,
         styleTitle: _titleStyle,
         description:
-            "Whether its a backpacking trip or a spiritual \njourney, we have a range of travel insurance \npolicies for you to choose from.",
+            "Whether its a backpacking or a spiritual \njourney, we have a range of travel insurance \npolicies for you to choose from.",
         styleDescription: _styleDescription,
         pathImage: "assets/images/travel_ins_min.png",
       ),
@@ -78,10 +78,29 @@ class _IntoScreensState extends State<IntoScreens> {
   }
 
   Widget renderNextBtn() {
-    return Icon(
-      Icons.navigate_next,
-      color: Color(_colorOrange),
-      // size: 35.0,
+    // return Icon(
+    //   Icons.navigate_next,
+    //   color: Color(_colorOrange),
+    //   // size: 35.0,
+    // );
+    return Chip(
+      // avatar: CircleAvatar(
+      //   backgroundColor: Colors.grey.shade800,
+      //   // child: Text('AB'),
+      // ),
+      backgroundColor: Colors.white,
+      deleteIcon: Icon(
+        Icons.navigate_next,
+        color: Color(_colorOrange),
+        // size: 35.0,
+      ),
+      deleteIconColor: Color(_colorOrange),
+      label: Text(
+        'SKIP',
+        style: TextStyle(
+          color: Color(_colorOrange),
+        ),
+      ),
     );
   }
 
