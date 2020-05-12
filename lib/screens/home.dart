@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:smartchoice/style.dart';
 
 import 'bottom_nav_bar/bottom_nav_bar.dart';
-import 'buy/category/category.dart';
+import 'product/categories/categories.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -51,7 +51,7 @@ class _HomeState extends State<Home> {
         );
         break;
       case 1:
-        return BuyCategory();
+        return ProductCategories();
         break;
       default:
         return Text('Default One');
