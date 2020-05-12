@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:intro_slider/intro_slider.dart';
 import 'package:intro_slider/slide_object.dart';
 
+import 'package:smartchoice/screens/home.dart';
+
 class IntoScreens extends StatefulWidget {
   @override
   _IntoScreensState createState() => _IntoScreensState();
@@ -69,8 +71,8 @@ class _IntoScreensState extends State<IntoScreens> {
   }
 
   void onDonePress() {
-    // Back to the first tab
-    this.goToTab(0);
+    // this.goToTab(0);
+    Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => Home()));
   }
 
   void onTabChangeCompleted(index) {
@@ -78,29 +80,9 @@ class _IntoScreensState extends State<IntoScreens> {
   }
 
   Widget renderNextBtn() {
-    // return Icon(
-    //   Icons.navigate_next,
-    //   color: Color(_colorOrange),
-    //   // size: 35.0,
-    // );
-    return Chip(
-      // avatar: CircleAvatar(
-      //   backgroundColor: Colors.grey.shade800,
-      //   // child: Text('AB'),
-      // ),
-      backgroundColor: Colors.white,
-      deleteIcon: Icon(
-        Icons.navigate_next,
-        color: Color(_colorOrange),
-        // size: 35.0,
-      ),
-      deleteIconColor: Color(_colorOrange),
-      label: Text(
-        'SKIP',
-        style: TextStyle(
-          color: Color(_colorOrange),
-        ),
-      ),
+    return Icon(
+      Icons.navigate_next,
+      color: Color(_colorOrange),
     );
   }
 
@@ -181,7 +163,7 @@ class _IntoScreensState extends State<IntoScreens> {
 
       // Done button
       renderDoneBtn: this.renderDoneBtn(),
-      // onDonePress: this.onDonePress,
+      onDonePress: this.onDonePress,
       // colorDoneBtn: Color(0x33ffcc5c),
       // highlightColorDoneBtn: Color(0xffffcc5c),
 
