@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:smartchoice/screens/buy/health/health.dart';
 
 class ProductCategories extends StatelessWidget {
-  // BuyCategory();
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -19,38 +18,72 @@ class ProductCategories extends StatelessWidget {
             ),
           ),
         ),
-        Container(
-          margin: EdgeInsets.only(bottom: 20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              CategoryWidget('assets/icons/health_min.png', 'Health Insurance'),
-              CategoryWidget('assets/icons/travel_min.png', 'Travel Insurance'),
-            ],
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(bottom: 20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              CategoryWidget('assets/icons/car_min.png', 'Car Insurance'),
-              CategoryWidget('assets/icons/termlife_min.png', 'Term Life'),
-            ],
-          ),
-        ),
-        Container(
-          margin: EdgeInsets.only(bottom: 20.0),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: <Widget>[
-              CategoryWidget(
-                  'assets/icons/corporate_min.png', 'Personal Accident'),
-              CategoryWidget(
-                  'assets/icons/corporate_min.png', 'Corporate Health'),
-            ],
-          ),
-        ),
+        // Container(
+        //   height: MediaQuery.of(context).size.height - 270,
+        //   child: ListView(
+        //     padding: const EdgeInsets.all(8),
+        //     children: <Widget>[
+              Container(
+                margin: EdgeInsets.only(bottom: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget(
+                          'assets/icons/health_min.png', 'Health Insurance'),
+                    ),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget(
+                          'assets/icons/travel_min.png', 'Travel Insurance'),
+                    ),
+                    //
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget(
+                          'assets/icons/car_min.png', 'Car Insurance'),
+                    ),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget(
+                          'assets/icons/termlife_min.png', 'Term Life'),
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(bottom: 20.0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget('assets/icons/corporate_min.png',
+                          'Personal Accident'),
+                    ),
+                    Padding(padding: EdgeInsets.all(10)),
+                    Expanded(
+                      flex: 1,
+                      child: CategoryWidget(
+                          'assets/icons/corporate_min.png', 'Corporate Health'),
+                    ),
+                  ],
+                ),
+              ),
+        //     ],
+        //   ),
+        // ),
       ],
     );
   }
@@ -66,7 +99,8 @@ class CategoryWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () => {
-        Navigator.push(context, MaterialPageRoute(builder: (BuildContext context) => BuyHealth()))
+        Navigator.push(context,
+            MaterialPageRoute(builder: (BuildContext context) => BuyHealth()))
       },
       // splashColor: Theme.of(context).splashColor,
       child: Container(
@@ -82,7 +116,7 @@ class CategoryWidget extends StatelessWidget {
             )
           ],
         ),
-        width: 170.0,
+        // width: 170.0,
         height: 170.0,
         child: Center(
           child: Column(
