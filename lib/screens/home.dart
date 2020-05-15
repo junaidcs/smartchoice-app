@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:smartchoice/style.dart';
 
+import 'account/account.dart';
 import 'bottom_nav_bar/bottom_nav_bar.dart';
+import 'manage/manage.dart';
 import 'product/categories/categories.dart';
+import 'referrals/referrals.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -52,6 +55,15 @@ class _HomeState extends State<Home> {
         break;
       case 1:
         return ProductCategories();
+        break;
+      case 2:
+        return Referrals();
+        break;
+      case 3:
+        return Manage();
+        break;
+      case 4:
+        return Account();
         break;
       default:
         return Text('Default One');
