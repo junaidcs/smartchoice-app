@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 import 'package:smartchoice/screens/splash/splash.dart';
 import 'package:smartchoice/screens/intro/intro.dart';
 import 'package:smartchoice/screens/home.dart';
-import 'package:smartchoice/screens/buy/health/health.dart';
 
 class App extends StatefulWidget {
   @override
@@ -25,8 +24,8 @@ class _AppState extends State<App> {
   }
 
   Widget _getScreen() {
-    // return IntoScreens();
     return Splash();
+    // return IntoScreens();
     // return Home();
     // return BuyHealth();
   }
