@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'package:smartchoice/screens/splash/splash.dart';
-import 'package:smartchoice/screens/intro/intro.dart';
-import 'package:smartchoice/screens/home.dart';
 
 class App extends StatefulWidget {
   @override
@@ -25,8 +23,5 @@ class _AppState extends State<App> {
 
   Widget _getScreen() {
     return Splash();
-    // return IntoScreens();
-    // return Home();
-    // return BuyHealth();
   }
 }
