@@ -19,11 +19,11 @@ class ProductCategories extends StatelessWidget {
             ),
           ),
         ),
-        // Container(
-        //   height: MediaQuery.of(context).size.height - 270,
-        //   child: ListView(
-        //     padding: const EdgeInsets.all(8),
-        //     children: <Widget>[
+        Container(
+          height: MediaQuery.of(context).size.height - 270,
+          child: ListView(
+            padding: const EdgeInsets.all(8),
+            children: <Widget>[
               Container(
                 margin: EdgeInsets.only(bottom: 20.0),
                 child: Row(
@@ -82,9 +82,9 @@ class ProductCategories extends StatelessWidget {
                   ],
                 ),
               ),
-        //     ],
-        //   ),
-        // ),
+            ],
+          ),
+        ),
       ],
     );
   }
