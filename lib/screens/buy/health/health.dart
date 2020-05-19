@@ -7,7 +7,7 @@ class BuyHealth extends StatelessWidget {
       appBar: AppBar(
         title: Text('Buy Health'),
       ),
-      body: Text('Buying Health'),
+      body: Text('Buying Health Products Screen'),
     );
   }
 }
